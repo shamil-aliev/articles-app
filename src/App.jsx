@@ -5,6 +5,8 @@ import Home from "./ui/Home";
 import Posts from "./features/posts/Posts";
 import Post from "./features/posts/Post";
 import CreatePost from "./features/posts/CreatePost";
+import EditPost from "./features/posts/EditPost";
+import Login from "./features/login/Login";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
       {
         path: "/posts",
@@ -25,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/posts/:postId",
         element: <Post />,
+      },
+      {
+        path: "/edit/:postId",
+        element: <EditPost />,
       },
     ],
   },
